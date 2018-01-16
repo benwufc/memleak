@@ -1,0 +1,25 @@
+===================
+PYTHON VERSION 2.7
+===================
+Python module you need:
+
+you should make sure your python module has "matplotlib".
+$sudo apt-get install python-matplotlib
+==========================================================
+how to use it?
+
+1. memleak_test.sh
+This is a script run in our Orbi project router when we need to save log.
+It prints out the info which is used to help the developer to debug memory leak issue.
+
+2. analyze_memleak.py
+* After saving the log, using this script to pick up meminfo and plot to the figure. Data Visualization makes developer easy analyze memory leak issue.
+
+* You can modified the following parameterse in this script:
+
+log_file_name = "select the log you would like to analyze"
+analyze_args = " select the parameters of meminfo you would like to plot"
+figure_name = "name the saving figure"
+
+* Run the script in terminal:
+$python analyze_memleak.py
